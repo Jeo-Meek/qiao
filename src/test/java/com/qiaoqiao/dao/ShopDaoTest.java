@@ -18,20 +18,23 @@ public class ShopDaoTest extends BaseTest {
     @Autowired
     private ShopDao shopDao;
     @Test
+    @Ignore
     public void testQuaryList(){
         Shop shopCondition = new Shop();
-        ShopCategory child1 = new ShopCategory();
-        ShopCategory parentCategory = new ShopCategory();
-        parentCategory.setShopCategoryId(1L);
-        child1.setParent(parentCategory);
-        child1.setShopCategoryId(3L);
-        shopCondition.setShopCategory(child1);
+        PersonInfo personInfo = new PersonInfo();
+        personInfo.setUserId(1L);
+        shopCondition.setOwner(personInfo);
+        ShopCategory shopCategory = new ShopCategory();
+        shopCategory.setShopCategoryId(3L);
+        shopCondition.setShopCategory(shopCategory);
         int count = shopDao.quaryShopCount(shopCondition);
         List<Shop> shopList = shopDao.shopList(shopCondition,0,6);
         for(Shop shop:shopList){
             System.out.println(shop);
         }
         System.out.println(count);
+
+
 
     }
     @Test
@@ -67,7 +70,7 @@ public class ShopDaoTest extends BaseTest {
         assertEquals(1,effectrdNum);
     }
     @Test
-    @Ignore
+
     public void testUpdate(){
         Shop shop = new Shop();
         shop.setShopId(1L);

@@ -2,7 +2,7 @@ $(function() {
 	getlist();
 	function getlist(e) {
 		$.ajax({
-			url : "/o2o/shopadmin/getshoplist",
+			url : "/shopadmin/getshoplist",
 			type : "get",
 			dataType : "json",
 			success : function(data) {
@@ -20,11 +20,17 @@ $(function() {
 	function handleList(data) {
 		var html = '';
 		data.map(function(item, index) {
-			html += '<div class="row row-shop"><div class="col-40">'
-					+ item.shopName + '</div><div class="col-40">'
-					+ shopStatus(item.enableStatus)
-					+ '</div><div class="col-20">'
-					+ goShop(item.enableStatus, item.shopId) + '</div></div>';
+			html += '<div class="row row-shop">' +
+						'<div class="col-40">'
+							+ item.shopName + '' +
+						'</div>' +
+						'<div class="col-40">'
+							+ shopStatus(item.enableStatus)
+						+ '</div>' +
+				'		<div class="col-20">'
+							+ goShop(item.enableStatus, item.shopId) +
+						'</div>' +
+				'</div>';
 
 		});
 		$('.shop-wrap').html(html);
@@ -42,7 +48,7 @@ $(function() {
 
 	function goShop(status, id) {
 		if (status == 1) {
-			return '<a href="/o2o/shopadmin/shopmanagement?shopId=' + id
+			return '<a href="/shopadmin/shopmanagement?shopId=' + id
 					+ '">进入</a>';
 		} else {
 			return '';

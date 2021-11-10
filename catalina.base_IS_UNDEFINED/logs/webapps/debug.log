@@ -1,39 +1,15 @@
-2021-10-29 10:21;16.664 [main] DEBUG com.qiaoqiao.dao.ShopDao.shopList - ==>  Preparing: select s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name from tb_shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id in (select shop_category_id from tb_shop_category WHERE parent_id = ?) and s.area_id=a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,?; 
-2021-10-29 10:21;16.881 [main] DEBUG com.qiaoqiao.dao.ShopDao.shopList - ==> Parameters: 12(Long), 0(Integer), 6(Integer)
-2021-10-29 10:21;17.016 [main] DEBUG com.qiaoqiao.dao.ShopDao.shopList - <==      Total: 0
-2021-10-29 10:26;04.873 [main] DEBUG com.qiaoqiao.dao.ShopDao.shopList - ==>  Preparing: select s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name from tb_shop s, tb_area a, tb_shop_category sc WHERE s.area_id = ? and s.area_id=a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,?; 
-2021-10-29 10:26;05.107 [main] DEBUG com.qiaoqiao.dao.ShopDao.shopList - ==> Parameters: 1(Integer), 0(Integer), 6(Integer)
-2021-10-29 10:26;05.140 [main] DEBUG com.qiaoqiao.dao.ShopDao.shopList - <==      Total: 2
-2021-10-29 10:29;46.573 [main] DEBUG com.qiaoqiao.dao.ShopDao.shopList - ==>  Preparing: select s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name from tb_shop s, tb_area a, tb_shop_category sc WHERE s.owner_id = ? and s.area_id=a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,?; 
-2021-10-29 10:29;46.785 [main] DEBUG com.qiaoqiao.dao.ShopDao.shopList - ==> Parameters: 1(Long), 0(Integer), 6(Integer)
-2021-10-29 10:29;46.958 [main] DEBUG com.qiaoqiao.dao.ShopDao.shopList - <==      Total: 6
-2021-10-29 10:31;04.663 [main] DEBUG com.qiaoqiao.dao.ShopDao.quaryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.owner_id = ? AND s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id 
-2021-10-29 10:31;04.810 [main] DEBUG com.qiaoqiao.dao.ShopDao.quaryShopCount - ==> Parameters: 1(Long)
-2021-10-29 10:31;04.952 [main] DEBUG com.qiaoqiao.dao.ShopDao.quaryShopCount - <==      Total: 1
-2021-10-29 10:31;04.974 [main] DEBUG com.qiaoqiao.dao.ShopDao.shopList - ==>  Preparing: select s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name from tb_shop s, tb_area a, tb_shop_category sc WHERE s.owner_id = ? and s.area_id=a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,?; 
-2021-10-29 10:31;04.976 [main] DEBUG com.qiaoqiao.dao.ShopDao.shopList - ==> Parameters: 1(Long), 0(Integer), 6(Integer)
-2021-10-29 10:31;04.992 [main] DEBUG com.qiaoqiao.dao.ShopDao.shopList - <==      Total: 6
-2021-10-29 10:32;35.348 [main] DEBUG com.qiaoqiao.dao.ShopDao.quaryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id in (select shop_category_id from tb_shop_category WHERE parent_id = ?) AND s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id 
-2021-10-29 10:32;35.508 [main] DEBUG com.qiaoqiao.dao.ShopDao.quaryShopCount - ==> Parameters: 1(Long)
-2021-10-29 10:32;35.559 [main] DEBUG com.qiaoqiao.dao.ShopDao.quaryShopCount - <==      Total: 1
-2021-10-29 10:32;35.656 [main] DEBUG com.qiaoqiao.dao.ShopDao.shopList - ==>  Preparing: select s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name from tb_shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id in (select shop_category_id from tb_shop_category WHERE parent_id = ?) and s.area_id=a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,?; 
-2021-10-29 10:32;35.659 [main] DEBUG com.qiaoqiao.dao.ShopDao.shopList - ==> Parameters: 1(Long), 0(Integer), 6(Integer)
-2021-10-29 10:32;35.669 [main] DEBUG com.qiaoqiao.dao.ShopDao.shopList - <==      Total: 0
-2021-10-29 10:39;32.916 [main] DEBUG com.qiaoqiao.dao.ShopDao.quaryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id = ? and s.shop_category_id in (select shop_category_id from tb_shop_category WHERE parent_id = ?) AND s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id 
-2021-10-29 10:39;33.034 [main] DEBUG com.qiaoqiao.dao.ShopDao.quaryShopCount - ==> Parameters: 3(Long), 1(Long)
-2021-10-29 10:39;33.096 [main] DEBUG com.qiaoqiao.dao.ShopDao.quaryShopCount - <==      Total: 1
-2021-10-29 10:39;33.110 [main] DEBUG com.qiaoqiao.dao.ShopDao.shopList - ==>  Preparing: select s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name from tb_shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id = ? and s.shop_category_id in (select shop_category_id from tb_shop_category WHERE parent_id = ?) and s.area_id=a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,?; 
-2021-10-29 10:39;33.111 [main] DEBUG com.qiaoqiao.dao.ShopDao.shopList - ==> Parameters: 3(Long), 1(Long), 0(Integer), 6(Integer)
-2021-10-29 10:39;33.120 [main] DEBUG com.qiaoqiao.dao.ShopDao.shopList - <==      Total: 0
-2021-10-29 10:42;02.045 [main] DEBUG com.qiaoqiao.dao.ShopDao.quaryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id = ? AND s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id 
-2021-10-29 10:42;02.208 [main] DEBUG com.qiaoqiao.dao.ShopDao.quaryShopCount - ==> Parameters: 1(Long)
-2021-10-29 10:42;02.271 [main] DEBUG com.qiaoqiao.dao.ShopDao.quaryShopCount - <==      Total: 1
-2021-10-29 10:42;02.299 [main] DEBUG com.qiaoqiao.dao.ShopDao.shopList - ==>  Preparing: select s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name from tb_shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id = ? and s.area_id=a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,?; 
-2021-10-29 10:42;02.303 [main] DEBUG com.qiaoqiao.dao.ShopDao.shopList - ==> Parameters: 1(Long), 0(Integer), 6(Integer)
-2021-10-29 10:42;02.322 [main] DEBUG com.qiaoqiao.dao.ShopDao.shopList - <==      Total: 6
-2021-10-29 10:45;11.246 [main] DEBUG com.qiaoqiao.dao.ShopDao.quaryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id = ? and s.shop_category_id in (select shop_category_id from tb_shop_category WHERE parent_id = ?) AND s.area_id=a.area_id AND s.shop_category_id = sc.shop_category_id 
-2021-10-29 10:45;11.444 [main] DEBUG com.qiaoqiao.dao.ShopDao.quaryShopCount - ==> Parameters: 3(Long), 1(Long)
-2021-10-29 10:45;11.492 [main] DEBUG com.qiaoqiao.dao.ShopDao.quaryShopCount - <==      Total: 1
-2021-10-29 10:45;11.506 [main] DEBUG com.qiaoqiao.dao.ShopDao.shopList - ==>  Preparing: select s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name from tb_shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id = ? and s.shop_category_id in (select shop_category_id from tb_shop_category WHERE parent_id = ?) and s.area_id=a.area_id and s.shop_category_id = sc.shop_category_id order by s.priority desc limit ?,?; 
-2021-10-29 10:45;11.507 [main] DEBUG com.qiaoqiao.dao.ShopDao.shopList - ==> Parameters: 3(Long), 1(Long), 0(Integer), 6(Integer)
-2021-10-29 10:45;11.519 [main] DEBUG com.qiaoqiao.dao.ShopDao.shopList - <==      Total: 3
+2021-11-10 20:18;48.333 [main] DEBUG com.qiaoqiao.dao.FormDao.updateForm - ==>  Preparing: update tb_form_action SET user_name=? where form_id = ? 
+2021-11-10 20:18;48.463 [main] DEBUG com.qiaoqiao.dao.FormDao.updateForm - ==> Parameters: 111(String), 1(Long)
+2021-11-10 20:18;48.465 [main] DEBUG com.qiaoqiao.dao.FormDao.updateForm - <==    Updates: 0
+2021-11-10 20:23;10.364 [main] DEBUG com.qiaoqiao.dao.FormDao.updateForm - ==>  Preparing: update tb_form_action SET user_name=? 
+2021-11-10 20:23;10.417 [main] DEBUG com.qiaoqiao.dao.FormDao.updateForm - ==> Parameters: 111(String)
+2021-11-10 20:23;10.436 [main] DEBUG com.qiaoqiao.dao.FormDao.updateForm - <==    Updates: 0
+2021-11-10 20:32;05.714 [main] DEBUG com.qiaoqiao.dao.FormDao.updateForm - ==>  Preparing: insert into tb_form_action (user_name,pass_word) VALUES (?,?) 
+2021-11-10 20:32;05.809 [main] DEBUG com.qiaoqiao.dao.FormDao.updateForm - ==> Parameters: 111(String), null
+2021-11-10 20:32;05.952 [main] DEBUG com.qiaoqiao.dao.FormDao.updateForm - <==    Updates: 1
+2021-11-10 21:22;54.936 [main] DEBUG com.qiaoqiao.dao.FormDao.updateForm - ==>  Preparing: insert into tb_form_action (user_name,pass_word) VALUES (?,?) 
+2021-11-10 21:22;55.031 [main] DEBUG com.qiaoqiao.dao.FormDao.updateForm - ==> Parameters: 111(String), null
+2021-11-10 21:22;55.088 [main] DEBUG com.qiaoqiao.dao.FormDao.updateForm - <==    Updates: 1
+2021-11-10 21:25;24.906 [main] DEBUG com.qiaoqiao.dao.FormDao.updateForm - ==>  Preparing: insert into tb_form_action (user_name,pass_word) VALUES (?,?) 
+2021-11-10 21:25;24.970 [main] DEBUG com.qiaoqiao.dao.FormDao.updateForm - ==> Parameters: qiao(String), null
+2021-11-10 21:25;25.034 [main] DEBUG com.qiaoqiao.dao.FormDao.updateForm - <==    Updates: 1

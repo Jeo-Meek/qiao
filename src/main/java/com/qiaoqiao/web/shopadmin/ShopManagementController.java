@@ -31,14 +31,14 @@ import java.util.Map;
 
 @Controller
 @RequestMapping("/shopadmin")
-public class ShopManagementController {
+public class  ShopManagementController {
     @Autowired
     private ShopService shopService;
     @Autowired
     private ShopCategoryService shopCategoryService;
     @Autowired
     private AreaService areaService;
-
+//当未登录直接访问这个页面，违规操作，会重定向到shoplist 页面里
     @RequestMapping(value = "/getshopmanagementinfo", method = RequestMethod.GET)
     @ResponseBody
     private Map<String, Object> getShopManagementInfo(HttpServletRequest request){
@@ -67,6 +67,10 @@ public class ShopManagementController {
     @ResponseBody
     private Map<String, Object> getShopList(HttpServletRequest request){
         Map<String, Object> modelMap = new HashMap<String, Object>();
+        PersonInfo personInfo = new PersonInfo();
+        personInfo.setUserId(1L);
+        personInfo.setName("test");
+        request.getSession().setAttribute("user",personInfo);
         PersonInfo user = (PersonInfo) request.getSession().getAttribute("user");
         try {
             Shop shopCondition = new Shop();

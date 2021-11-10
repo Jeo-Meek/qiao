@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>form表单提交测试</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+</head>
+<body>
+<form id="add" action="" name="myform" onsubmit="validateForm()">
+    <input type="hidden" name="FormId">
+    用户名: <input type="text" id="UserName" name="UserName"></input>
+    密码: <input type="password" id="UserPassword" name="UserPassword"></input>
+    <!--    <button type="submit"  onclick="up()" >提交</button>-->
+
+    <input type="submit" onclick="up()" value="提交"></input>
+</form>
+<script>
+    function validateForm() {
+        var y = new RegExp(/^\d{4}(-)(1[0-2]|0?\d)\1([0-2]\d|\d|30|31)$/);
+
+        var x = document.forms["myform"]["UserName"].value;
+        alert(y.test('1999-02-01'));
+    }
+
+    function up() {
+
+        var formData = $("#add").val();
+        formDatas = JSON.stringify(formData);
+        var params = {"UserName": $("#UserName").val(), "UserPassword": $("#UserPassword").val()}
+        // $.ajax({
+        //     type: "POST",
+        //     url: "/formaction/submit",
+        //     data: params,
+        //     dataType: "json",
+        //     error:function (){
+        //       window.alert('获取参数失败');
+        //     },
+        //     success:function () {
+        //         alert("1111");
+        //     }
+        // });
+    };
+
+
+</script>
+</body>
+</html>
