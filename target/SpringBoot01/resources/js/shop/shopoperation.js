@@ -12,7 +12,6 @@ $(function() {
 	// 注册店铺的URL
 
 	var registerShopUrl = '/shopadmin/registershop';
-	alert(initUrl);
 	getShopInitInfo()
 	// 编辑店铺前需要获取店铺信息，这里为获取当前店铺信息的URL
 	var shopInfoUrl = "/shopadmin/getshopbyid?shopId=" + shopId;

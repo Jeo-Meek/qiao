@@ -1,15 +1,5 @@
-2021-11-10 20:18;48.333 [main] DEBUG com.qiaoqiao.dao.FormDao.updateForm - ==>  Preparing: update tb_form_action SET user_name=? where form_id = ? 
-2021-11-10 20:18;48.463 [main] DEBUG com.qiaoqiao.dao.FormDao.updateForm - ==> Parameters: 111(String), 1(Long)
-2021-11-10 20:18;48.465 [main] DEBUG com.qiaoqiao.dao.FormDao.updateForm - <==    Updates: 0
-2021-11-10 20:23;10.364 [main] DEBUG com.qiaoqiao.dao.FormDao.updateForm - ==>  Preparing: update tb_form_action SET user_name=? 
-2021-11-10 20:23;10.417 [main] DEBUG com.qiaoqiao.dao.FormDao.updateForm - ==> Parameters: 111(String)
-2021-11-10 20:23;10.436 [main] DEBUG com.qiaoqiao.dao.FormDao.updateForm - <==    Updates: 0
-2021-11-10 20:32;05.714 [main] DEBUG com.qiaoqiao.dao.FormDao.updateForm - ==>  Preparing: insert into tb_form_action (user_name,pass_word) VALUES (?,?) 
-2021-11-10 20:32;05.809 [main] DEBUG com.qiaoqiao.dao.FormDao.updateForm - ==> Parameters: 111(String), null
-2021-11-10 20:32;05.952 [main] DEBUG com.qiaoqiao.dao.FormDao.updateForm - <==    Updates: 1
-2021-11-10 21:22;54.936 [main] DEBUG com.qiaoqiao.dao.FormDao.updateForm - ==>  Preparing: insert into tb_form_action (user_name,pass_word) VALUES (?,?) 
-2021-11-10 21:22;55.031 [main] DEBUG com.qiaoqiao.dao.FormDao.updateForm - ==> Parameters: 111(String), null
-2021-11-10 21:22;55.088 [main] DEBUG com.qiaoqiao.dao.FormDao.updateForm - <==    Updates: 1
-2021-11-10 21:25;24.906 [main] DEBUG com.qiaoqiao.dao.FormDao.updateForm - ==>  Preparing: insert into tb_form_action (user_name,pass_word) VALUES (?,?) 
-2021-11-10 21:25;24.970 [main] DEBUG com.qiaoqiao.dao.FormDao.updateForm - ==> Parameters: qiao(String), null
-2021-11-10 21:25;25.034 [main] DEBUG com.qiaoqiao.dao.FormDao.updateForm - <==    Updates: 1
+2021-11-20 20:45;41.288 [main] DEBUG c.q.dao.ProductCategoryDao.betchProductCategorys - ==>  Preparing: insert into tb_product_category(product_category_name,priority,create_time,shop_id) values ( ?, ?, ?, ? ) , ( ?, ?, ?, ? ) 
+2021-11-20 20:45;41.455 [main] DEBUG c.q.dao.ProductCategoryDao.betchProductCategorys - ==> Parameters: 商品类别1(String), 1(Integer), 2021-11-20 20:45:40.119(Timestamp), 1(Long), 商品类别2(String), 2(Integer), 2021-11-20 20:45:40.119(Timestamp), 1(Long)
+2021-11-20 20:51;55.028 [main] DEBUG c.q.dao.ProductCategoryDao.betchProductCategorys - ==>  Preparing: insert into tb_product_category(product_category_name,priority,create_time,shop_id) values ( ?, ?, ?, ? ) , ( ?, ?, ?, ? ) 
+2021-11-20 20:51;55.091 [main] DEBUG c.q.dao.ProductCategoryDao.betchProductCategorys - ==> Parameters: 商品类别1(String), 1(Integer), 2021-11-20 20:51:53.846(Timestamp), 1(Long), 商品类别2(String), 2(Integer), 2021-11-20 20:51:53.846(Timestamp), 1(Long)
+2021-11-20 20:51;55.149 [main] DEBUG c.q.dao.ProductCategoryDao.betchProductCategorys - <==    Updates: 2

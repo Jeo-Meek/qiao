@@ -4,15 +4,21 @@ import java.util.Date;
 
 //商店类别
 public class ShopCategory {
+    //商店类别id
     private Long shopCategoryId;
+    //商店类别名称
     private String shopCategoryName;
     //描述
     private String shopCategoryDesc;
+    //商店类别图
     private String shopCategoryImg;
+    //权重
     private Integer priority;
+    //创建时间
     private Date createTime;
+    //最后编辑时间
     private Date lastEditTime;
-    //上级ID
+    //上级ID 一级商店类别
     private ShopCategory parent;
 
     public Long getShopCategoryId() {
@@ -77,5 +83,19 @@ public class ShopCategory {
 
     public void setParent(ShopCategory parent) {
         this.parent = parent;
+    }
+
+    @Override
+    public String toString() {
+        return "ShopCategory{" +
+                "shopCategoryId=" + shopCategoryId +
+                ", shopCategoryName='" + shopCategoryName + '\'' +
+                ", shopCategoryDesc='" + shopCategoryDesc + '\'' +
+                ", shopCategoryImg='" + shopCategoryImg + '\'' +
+                ", priority=" + priority +
+                ", createTime=" + createTime +
+                ", lastEditTime=" + lastEditTime +
+                ", parent=" + parent +
+                '}';
     }
 }

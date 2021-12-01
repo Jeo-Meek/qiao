@@ -3,10 +3,15 @@ package com.qiaoqiao.pojo;
 import java.util.Date;
 
 public class ProductCategory {
+    //商品类别id
     private Long ProductCategoryId;
-    private Long shpoId;
+    //商店id
+    private Long shopId;
+    //商品类别名称
     private String ProductCategoryName;
+    //权重
     private Integer priority;
+    //创建时间
     private Date createTime;
 
     public Long getProductCategoryId() {
@@ -17,12 +22,12 @@ public class ProductCategory {
         ProductCategoryId = productCategoryId;
     }
 
-    public Long getShpoId() {
-        return shpoId;
+    public Long getShopId() {
+        return shopId;
     }
 
-    public void setShpoId(Long shpoId) {
-        this.shpoId = shpoId;
+    public void setShopId(Long shpoId) {
+        this.shopId = shpoId;
     }
 
     public String getProductCategoryName() {
@@ -47,5 +52,16 @@ public class ProductCategory {
 
     public void setCreateTime(Date createTime) {
         this.createTime = createTime;
+    }
+
+    @Override
+    public String toString() {
+        return "ProductCategory{" +
+                "ProductCategoryId=" + ProductCategoryId +
+                ", shpoId=" + shopId +
+                ", ProductCategoryName='" + ProductCategoryName + '\'' +
+                ", priority=" + priority +
+                ", createTime=" + createTime +
+                '}';
     }
 }

@@ -3,12 +3,19 @@ package com.qiaoqiao.pojo;
 import java.util.Date;
 
 public class Shop {
+    //商店id
     private Long shopId;
+    //商店名称
     private String shopName;
+    //商店描述
     private String shopDesc;
+    //商店详细地址
     private String shopAddr;
+    //商店电话
     private String phone;
+    //商店图片
     private String shopImg;
+    //权重
     private Integer priority;
     private Date createTime;
     private Date lastEditTime;
@@ -16,8 +23,11 @@ public class Shop {
     private Integer enableStatus;
     //超级管理员给店家的提醒
     private String advice;
+    //商店所在区域
     private Area area;
+    //店主信息
     private PersonInfo owner;
+    //商店类别
     private ShopCategory shopCategory;
 
 

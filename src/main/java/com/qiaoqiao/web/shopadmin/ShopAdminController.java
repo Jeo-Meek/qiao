@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 @RequestMapping(value = "/shopadmin",method = {RequestMethod.GET})
 public class ShopAdminController {
+
     @RequestMapping(value = "/shopoperation")
     public String shopOperation(){
         return "shop/shopoperation";
@@ -16,8 +17,22 @@ public class ShopAdminController {
     public String shoplist(){
         return "shop/shoplist";
     }
+
+
     @RequestMapping(value = "/formlist")
     public String formlist(){
         return "shop/study";
+    }
+
+    @RequestMapping(value = "/shopmanagement")
+    public String shopManagement() {
+        // 转发至店铺管理页面
+        return "shop/shopmanagement";
+    }
+
+    @RequestMapping(value = "/productcategorymanagement")
+    private String productCategoryManage() {
+        // 转发至商品类别管理页面
+        return "shop/productcategorymanagement";
     }
 }

@@ -63,6 +63,12 @@ public class  ShopManagementController {
         }
         return modelMap;
     }
+
+    /**
+     * 获取商店列表
+     * @param request
+     * @return
+     */
     @RequestMapping(value = "/getshoplist", method = RequestMethod.GET)
     @ResponseBody
     private Map<String, Object> getShopList(HttpServletRequest request){
